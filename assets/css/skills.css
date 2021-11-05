@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+  overflow-x: hidden;
+  font-family: Sans-Serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+.container-fluid{
+    align-items: center;
+    justify-content: space-between;
+}
+.row {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-weight: 550;
+    font-size: 1.3rem;
+}
+
+.number {
+    right: 10px;
+    padding-right: 15px;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: white;
+    font-size: 120px;
+    font-weight: 700;
+  }
+  
+  .number._1 {
+    bottom: -2%;
+    font-family: Rubik, sans-serif;
+    color: white;
+    font-size: 80px;
+    font-weight: 700;
+  }
+  
+  .number._2 {
+    bottom: -2%;
+    font-family: Rubik, sans-serif;
+    color: white;
+    font-size: 80px;
+  }
+  
+  .number._3 {
+    bottom: -2%;
+    font-family: Rubik, sans-serif;
+    color: white;
+    font-size: 80px;
+  }
+  
+  .text-container {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 30px;
+    padding-right: 49px;
+    padding-left: 59px;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 0px;
+  }
+
+
+  .menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white;
+    padding: 10px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .menu-container a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-container a:hover {
+    color: #edf5e1;
+    border-bottom: 3px solid white;
+  }
+
+  .nav-link-active {
+    border-bottom: 2px solid white;
+  }
+
+/*  .menu-container ul li a::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+  }
+  .menu-container ul li a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+*/
+  
+  .menu-container input {
+    display: block;
+    width: 35px;
+    height: 50px;
+    margin: 0px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  
+  /* Burger menu */
+  .menu-container span {
+    display: block;
+    top: 20%;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    background-color: black;
+    position: relative;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  .menu-container span:first-child {
+    transform-origin: 0% 0%;
+  }
+  
+  .menu-container span:nth-child(3) {
+    transform-origin: 0% 100%;
+  }
+  
+  .menu-container input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(3px,-1px);
+    background: white;
+  }
+  
+  .menu-container input:checked ~ span:nth-child(4) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  .menu-container input:checked ~ span:nth-child(3) {
+    transform: rotate(-45deg) translate(-5px,11px);
+  }
+  
+  .menu ul {
+    list-style: none;
+  }
+  
+  .menu li {
+    padding: 10px 0;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  
+  /* mobile styles */
+  @media only screen and (max-width: 767px) { 
+    .menu-container {
+      flex-direction: column;
+      align-items: flex-end;
+      border-radius: 50px;
+      background-color: white;
+      height: 50px;
+      width: 337px;
+    }
+
+  
+    .menu {
+      position: absolute;
+      box-sizing: border-box;
+      width: 300px;
+      right: -300px;
+      top: 0;
+      margin: -20px;
+      padding: 75px 50px 50px;
+      background: black;
+      -webkit-font-smoothing: antialiased;
+      /* to stop flickering of text in safari */
+      transform-origin: 0% 0%;
+      transform: translateX(0%);
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+  
+    .menu-container input:checked ~ .menu {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* desktop styles */
+  @media only screen and (min-width: 768px) { 
+    .menu-container {
+      width: 100%;
+      align-items: center;
+    }
+  
+    .menu-container a {
+      color: white;
+    }
+  
+    .menu-container input {
+      display: none;
+    }
+  
+    /* Burger menu */
+    .menu-container span {
+      display: none;
+    }
+  
+    .menu {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .menu ul {
+      display: flex;
+      padding: 0;
+    }
+  
+    .menu li {
+      padding: 0 20px;
+    }
+  }
+
+
+
+
+
+.col-md-12 {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.col-md-8 .col-md-4 {
+  display: flex;
+}
+.icons {
+  padding: 20px;
+}
+
+.text-box {
+    display: flex;
+    padding: 70px;
+}
+
+.img {
+    padding: 0 50px;
+}
+
+.footer {
+  padding-top: 50px;
+}
+
+.col-md-12 .col-md-8{
+  display: flex;
+}
+
+
+.menu {
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.menu li {
+  padding: 0px 40px;
+}
+
+.col-md-6 {
+    text-align: center;
+    align-self: center;
+}
+
+.content {
+    padding: 70px 40px;
+}
+
+
+
+
+
+
+/* mobile styles */
+@media (max-width: 675px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0;
+  }
+  .container {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+  .col-md-2 {
+    padding: 0;
+    margin: 0;
+  }
+  .menu ul li {
+    padding-bottom: 30px;
+  }
+  .col-md-6 {
+    padding: 20px;
+  }
+  .content {
+      padding: 60px 0;
+  }
+  .icons {
+    padding: 12px;
+}
+p {
+  font-weight: 500;
+}
+
+}

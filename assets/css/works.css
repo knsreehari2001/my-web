@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+  overflow-x: hidden;
+  font-family: Sans-Serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+.container-fluid{
+    align-items: center;
+    justify-content: space-between;
+}
+.row {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+  .menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white;
+    padding: 10px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .menu-container a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-container a:hover {
+    color: #edf5e1;
+    border-bottom: 3px solid white;
+  }
+
+  .nav-link-active {
+    border-bottom: 2px solid white;
+  }
+
+/*  .menu-container ul li a::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+  }
+  .menu-container ul li a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+*/
+  
+  .menu-container input {
+    display: block;
+    width: 35px;
+    height: 50px;
+    margin: 0px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  
+  /* Burger menu */
+  .menu-container span {
+    display: block;
+    top: 20%;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    background-color: black;
+    position: relative;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  .menu-container span:first-child {
+    transform-origin: 0% 0%;
+  }
+  
+  .menu-container span:nth-child(3) {
+    transform-origin: 0% 100%;
+  }
+  
+  .menu-container input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(3px,-1px);
+    background: white;
+  }
+  
+  .menu-container input:checked ~ span:nth-child(4) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  .menu-container input:checked ~ span:nth-child(3) {
+    transform: rotate(-45deg) translate(-5px,11px);
+  }
+  
+  .menu ul {
+    list-style: none;
+  }
+  
+  .menu li {
+    padding: 10px 0;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  
+  /* mobile styles */
+  @media only screen and (max-width: 767px) { 
+    .menu-container {
+      flex-direction: column;
+      align-items: flex-end;
+      border-radius: 50px;
+      background-color: white;
+      height: 50px;
+      width: 337px;
+    }
+
+  
+    .menu {
+      position: absolute;
+      box-sizing: border-box;
+      width: 300px;
+      right: -300px;
+      top: 0;
+      margin: -20px;
+      padding: 75px 50px 50px;
+      background: black;
+      -webkit-font-smoothing: antialiased;
+      /* to stop flickering of text in safari */
+      transform-origin: 0% 0%;
+      transform: translateX(0%);
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+  
+    .menu-container input:checked ~ .menu {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* desktop styles */
+  @media only screen and (min-width: 768px) { 
+    .menu-container {
+      width: 100%;
+      align-items: center;
+    }
+  
+    .menu-container a {
+      color: white;
+    }
+  
+    .menu-container input {
+      display: none;
+    }
+  
+    /* Burger menu */
+    .menu-container span {
+      display: none;
+    }
+  
+    .menu {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .menu ul {
+      display: flex;
+      padding: 0;
+    }
+  
+    .menu li {
+      padding: 0 20px;
+    }
+  }
+
+
+
+
+
+
+.row .load-more h4 {
+  color: white;
+  text-align: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 100px;
+}
+
+.content .col-md-6 {
+  padding: 50px 50px;
+}
+
+.foot {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.col-md-8 .col-md-4 {
+  display: flex;
+}
+.icons {
+  padding: 20px;
+}
+
+
+
+.footer {
+  padding-top: 50px;
+}
+
+.col-md-12 .col-md-8{
+  display: flex;
+}
+
+.rect-img {
+  padding-top: 0px;
+}
+
+.menu {
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.menu li {
+  padding: 0px 40px;
+}
+
+
+/*.content .col-md-5 {
+    text-align: center;
+    align-items: center;
+    /*width: 400px;
+    height: 550px;*//*
+    background: #3B3B3B;
+    opacity: 0.6;
+    box-shadow: -20px 20px 4px rgba(0, 0, 0, 0.35);
+    border-radius: 50px;
+    position: relative;
+    padding: 40px 40px;
+}*/
+
+
+
+/*.content .col-md-4 {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 20px;
+}*/
+
+
+
+
+
+
+/* mobile styles */
+@media (max-width: 675px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0;
+  }
+  .container {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+  .col-md-2 {
+    padding: 0;
+    margin: 0;
+  }
+  .menu ul li {
+    padding-bottom: 30px;
+  }
+  .col-md-5 {
+    padding: 20px;
+  }
+  .content {
+      padding: 0 0;
+  }
+  .row .load-more h4 {
+    margin: 20px;
+  }
+  .icons {
+    padding: 12px;
+}
+
+}
+
+
+/* Glassmorphism card effect 
+.card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+} */
