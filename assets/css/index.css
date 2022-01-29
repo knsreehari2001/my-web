@@ -339,7 +339,14 @@ h4 {
   padding: 20px;
 }
 
-
+.alert-window {
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  height: 0;
+  opacity: 0;
+}
 
 .footer {
   padding-top: 50px;
@@ -420,6 +427,14 @@ h4 {
   }
   .icons {
     padding: 12px;
-}
+  }
+  .alert-window {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+  }
 
 }

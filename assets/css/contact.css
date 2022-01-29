@@ -245,6 +245,10 @@ p {
   display: flex;
 }
 
+.content1 a {
+  text-decoration: none;
+}
+
 
 .menu {
   text-align: center;
